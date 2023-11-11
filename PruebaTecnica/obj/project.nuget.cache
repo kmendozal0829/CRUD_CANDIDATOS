@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ynT7gKAXA2RH80W44LNvmYq9CJUlAuO0BMWna3pofoYY7+lAbw/sGCC5YKLB5iR6CO+8kWdyUJx+BljNLAdBjA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kevin\\OneDrive\\Documentos\\Proyectos\\PruebaTecnica\\PruebaTecnica\\PruebaTecnica\\PruebaTecnica.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+  ],
+  "logs": []
+}
