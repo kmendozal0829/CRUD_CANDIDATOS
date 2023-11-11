@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PruebaTecnica.PresentationWeb.props" />
+</Project>
