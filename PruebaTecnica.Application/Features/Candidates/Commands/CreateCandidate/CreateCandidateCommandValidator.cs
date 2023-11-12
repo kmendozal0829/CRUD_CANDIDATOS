@@ -25,16 +25,10 @@ namespace PruebaTecnica.Application.Features.Candidates.Commands.CreateCandidate
                 .EmailAddress().WithMessage("El formato del correo electrónico no es válido.");
 
             RuleFor(p => p.Birthdate)
-            .NotEmpty().WithMessage("La fecha de nacimiento es obligatoria.")
-            .Must(BeValidBirthdate).WithMessage("La fecha de nacimiento debe ser válida y el candidato debe tener al menos 16 años.");
+            .NotEmpty().WithMessage("La fecha de nacimiento es obligatoria.");
+            
 
 
-        }
-
-        private bool BeValidBirthdate(DateTime birthdate)
-        {
-            DateTime fechaMinima = DateTime.Today.AddYears(-16);
-            return birthdate < DateTime.Today && birthdate > fechaMinima;
-        }
+        }        
     }
 }

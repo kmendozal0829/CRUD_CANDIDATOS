@@ -1,0 +1,61 @@
+﻿@using PruebaTecnica.Application.Features.Candidates.Queries.GetCandidate;
+@model CandidateWithExperiencesVm
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container mt-5">
+    <h2>Detalles del Candidato</h2>
+    <br />
+    <a class="btn btn-primary" asp-area="" asp-controller="Candidate" asp-action="Index"> < Volver</a>
+    <br />
+    @if (Model != null)
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name @Model.Surname</h5>
+                <p class="card-text">ID: @Model.CandidateId</p>
+                <p class="card-text">Fecha de Nacimiento: @Model.Birthdate.ToShortDateString()</p>
+                <p class="card-text">Correo Electrónico: @Model.Email</p>
+
+                <h5 class="mt-4">Experiencias Laborales</h5>
+                @if (Model.CandidateExperiences != null && Model.CandidateExperiences.Any())
+                {
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Empresa</th>
+                                <th>Puesto de Trabajo</th>
+                                <th>Descripción</th>
+                                <th>Salario</th>
+                                <th>Fecha de Inicio</th>
+                                <th>Fecha de Fin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var experience in Model.CandidateExperiences)
+                            {
+                                <tr>
+                                    <td>@experience.Company</td>
+                                    <td>@experience.Job</td>
+                                    <td>@experience.Description</td>
+                                    <td>@experience.Salary</td>
+                                    <td>@experience.BeginDate.ToShortDateString()</td>
+                                    <td>@experience.EndDate.ToShortDateString()</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>No hay experiencias laborales registradas.</p>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>No se encontraron detalles del candidato.</p>
+    }
+</div>
