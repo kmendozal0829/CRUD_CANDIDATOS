@@ -172,3 +172,4 @@ C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Presenta
 C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.PresentationWeb\obj\Debug\netcoreapp3.1\Razor\Views\Candidate\Details.cshtml.g.cs
 C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.PresentationWeb\obj\Debug\netcoreapp3.1\Razor\Views\Candidate\Delete.cshtml.g.cs
 C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.PresentationWeb\obj\Debug\netcoreapp3.1\Razor\Views\Candidate\Edit.cshtml.g.cs
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.PresentationWeb\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll

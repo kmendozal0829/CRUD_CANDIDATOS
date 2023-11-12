@@ -13,7 +13,8 @@ namespace PruebaTecnica.Infrastructure
         {
             
             services.AddDbContext<CandidateDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("SqlServer"))
+                //options.UseSqlServer(configuration.GetConnectionString("SqlServer"))
+                options.UseInMemoryDatabase(databaseName: configuration.GetConnectionString("InMemory"))
                 );
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));

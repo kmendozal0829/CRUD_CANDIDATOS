@@ -46,16 +46,19 @@ namespace PruebaTecnica.Application.Features.Candidates.Commands.CreateCandidate
 
             foreach (var item in request.CandidateExperiences)
             {
-                var experience = new CandidateExperience()
+                if (!string.IsNullOrEmpty(item.Job))
                 {
-                    BeginDate = item.BeginDate,
-                    Company = item.Company,
-                    Description = item.Description,
-                    EndDate = item.EndDate,
-                    Job = item.Job,
-                    Salary = item.Salary                    
-                };
-                listExperiences.Add(experience);
+                    var experience = new CandidateExperience()
+                    {
+                        BeginDate = item.BeginDate,
+                        Company = item.Company,
+                        Description = item.Description,
+                        EndDate = item.EndDate,
+                        Job = item.Job,
+                        Salary = item.Salary
+                    };
+                    listExperiences.Add(experience);
+                }                
             }
 
             return listExperiences;
