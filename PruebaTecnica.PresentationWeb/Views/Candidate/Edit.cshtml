@@ -1,0 +1,100 @@
+﻿@using PruebaTecnica.Application.Features.Candidates.Queries.GetCandidate;
+@model CandidateWithExperiencesVm
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container mt-5">
+    <h2>Editar Candidato</h2>
+
+    <form asp-action="Edit" asp-controller="Candidate" method="post">
+        <input type="hidden" asp-for="CandidateId" />
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="Name">Nombre:</label>
+                    <input type="text" class="form-control" id="Name" name="Name" asp-for="Name" value="@Model.Name" />
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="Surname">Apellido:</label>
+                    <input type="text" class="form-control" id="Surname" name="Surname" asp-for="Surname" value="@Model.Surname" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="Birthdate">Fecha de Nacimiento:</label>
+                    <input type="date" class="form-control" id="Birthdate" name="Birthdate" asp-for="Birthdate" value="@Model.Birthdate.ToString("yyyy-MM-dd")" />
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="Email">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="Email" name="Email" asp-for="Email" value="@Model.Email" />
+                </div>
+            </div>
+        </div>  
+
+        <!-- Sección para las experiencias -->
+        <h3>Experiencias Laborales</h3>
+
+        @if (Model.CandidateExperiences != null && Model.CandidateExperiences.Any())
+        {
+            @foreach (var experience in Model.CandidateExperiences)
+            {
+                <input type="hidden" asp-for="CandidateId" name="CandidateExperiences[@Model.CandidateExperiences.ToList().IndexOf(experience)].CandidateExperienceId" value="@experience.CandidateExperienceId" />
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="Company">Empresa:</label>
+                            <input type="text" class="form-control" id="Company" name="CandidateExperiences[@Model.CandidateExperiences.ToList().IndexOf(experience)].Company" value="@experience.Company" />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="Job">Puesto de Trabajo:</label>
+                            <input type="text" class="form-control" id="Job" name="CandidateExperiences[@Model.CandidateExperiences.ToList().IndexOf(experience)].Job" value="@experience.Job" />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="Salary">Salario:</label>
+                            <input type="number" class="form-control" id="Salary" name="CandidateExperiences[@Model.CandidateExperiences.ToList().IndexOf(experience)].Salary" value="@experience.Salary" step="0.01" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Description">Descripción:</label>
+                    <textarea class="form-control" id="Description" name="CandidateExperiences[@Model.CandidateExperiences.ToList().IndexOf(experience)].Description">@experience.Description</textarea>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="BeginDate">Fecha de Inicio:</label>
+                            <input type="date" class="form-control" id="BeginDate" name="CandidateExperiences[@Model.CandidateExperiences.ToList().IndexOf(experience)].BeginDate" value="@experience.BeginDate.ToString("yyyy-MM-dd")" />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="EndDate">Fecha de Fin:</label>
+                            <input type="date" class="form-control" id="EndDate" name="CandidateExperiences[@Model.CandidateExperiences.ToList().IndexOf(experience)].EndDate" value="@experience.EndDate.ToString("yyyy-MM-dd")" />
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+            }
+
+        }
+        else
+        {
+            <p>No hay experiencias laborales registradas.</p>
+        }
+
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        <a asp-action="Details" asp-controller="Candidate" asp-route-id="@Model.CandidateId" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

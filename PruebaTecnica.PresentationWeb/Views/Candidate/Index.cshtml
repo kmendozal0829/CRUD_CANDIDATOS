@@ -1,0 +1,43 @@
+﻿@using PruebaTecnica.Application.Features.Candidates.Queries.GetCandidatesList;
+@model List<CandidatesVm>
+
+@*
+    
+*@
+
+@{
+    ViewData["Title"] = "Candidate";
+}
+
+<h2>Candidatos</h2>
+<br />
+<a class="btn btn-primary" asp-area="" asp-controller="Candidate" asp-action="Create">Nuevo Candidato</a>
+
+<br />
+<br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Fecha de Nacimiento</th>
+            <th scope="col">Email</th>
+            <th scope="col">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var candidate in Model)
+        {
+            <tr>
+                <th scope="row">@candidate.CandidateId</th>
+                <td>@candidate.Name</td>
+                <td>@candidate.Surname</td>
+                <td>@candidate.Birthdate.ToShortDateString()</td>
+                <td>@candidate.Email</td>
+                <td><a href="@Url.Action("Edit", "Candidate", new { id = candidate.CandidateId })" class="btn btn-link">Editar</a> | <a href="@Url.Action("Details", "Candidate", new { id = candidate.CandidateId })" class="btn btn-link">Detalles</a>| <a href="@Url.Action("Delete", "Candidate", new { id = candidate.CandidateId })" class="btn btn-link">Eliminar</a></td>
+            </tr>
+        }
+        
+    </tbody>
+</table>

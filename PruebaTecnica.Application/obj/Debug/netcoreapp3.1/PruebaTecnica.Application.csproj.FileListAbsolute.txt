@@ -1,0 +1,13 @@
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\bin\Debug\netcoreapp3.1\PruebaTecnica.Application.deps.json
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\bin\Debug\netcoreapp3.1\PruebaTecnica.Application.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\bin\Debug\netcoreapp3.1\PruebaTecnica.Application.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\bin\Debug\netcoreapp3.1\PruebaTecnica.Domain.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\bin\Debug\netcoreapp3.1\PruebaTecnica.Domain.pdb
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.AssemblyInfoInputs.cache
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.AssemblyInfo.cs
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.csproj.CopyComplete
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.dll
+C:\Users\kevin\OneDrive\Documentos\Personal\PruebaTecnica\PruebaTecnica.Application\obj\Debug\netcoreapp3.1\PruebaTecnica.Application.pdb
